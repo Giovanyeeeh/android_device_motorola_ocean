@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common LineageOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common ArrowOS stuff
+$(call inherit-product, vendor/pixys/config/common.mk)
 
 # Inherit from ocean device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -29,10 +29,13 @@ PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
     ro.telephony.default_network \
     ro.vendor.telephony.default_network
 
+# Pixys_Maintainer
+DEVICE_MAINTAINER := Giovanyeeeh
+
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := ocean
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_NAME := lineage_ocean
+PRODUCT_NAME := pixys_ocean
 PRODUCT_MODEL := moto g(7) power
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -40,4 +43,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
         PRIVATE_BUILD_DESC="ocean-user 9 PPO29.114-134 fee207 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := motorola/ocean/ocean:9/PPO29.114-134/fee207:user/release-keys
+BUILD_FINGERPRINT := google/redfin/redfin:11/RQ3A.210905.001/7511028:user/release-keys
